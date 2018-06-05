@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\src\Dotnet.Tool.Md5\Dotnet.Tool.MD5.csproj" />
+    <ProjectReference Include="..\..\src\Dotnet.Tool.Md5\Dotnet.Tool.MD5.csproj" />
   </ItemGroup>
 
 </Project>
