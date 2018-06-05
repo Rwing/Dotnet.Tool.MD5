@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <IsPackable>true</IsPackable>
+    <PackAsTool>true</PackAsTool>
+    <ToolCommandName>dmd5</ToolCommandName>
+    <AssemblyName>dmd5</AssemblyName>
+    <PackageId>dmd5</PackageId>
+    <Authors>Rwing</Authors>
+    <Company>Rwing</Company>
+    <Product>Dotnet.Tool.MD5</Product>
+    <Version>0.0.1</Version>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+</Project>
