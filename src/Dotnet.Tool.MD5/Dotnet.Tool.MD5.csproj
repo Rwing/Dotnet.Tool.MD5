@@ -13,6 +13,10 @@
     <Product>Dotnet.Tool.MD5</Product>
     <Version>0.0.1</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Description>Dotnet.Tool.MD5 is a .NET Core Global Tool uesd to generate md5 hash value in CLI.</Description>
+    <PackageLicenseUrl></PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/Rwing/Dotnet.Tool.MD5</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Rwing/Dotnet.Tool.MD5</RepositoryUrl>
   </PropertyGroup>
 
 </Project>
