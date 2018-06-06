@@ -8,12 +8,19 @@ namespace Dotnet.Tool.MD5
 	{
 		public static void Main(string[] args)
 		{
-			using (System.Security.Cryptography.MD5 md5Hash = System.Security.Cryptography.MD5.Create())
+			var (input, option) = ParseArgs(args);
+			var result = GenerateHash(input, option);
+			Console.WriteLine(result);
+		}
+
+		public static string GenerateHash(string input, string option, string algorithmName = "md5")
+		{
+			//TODO: support more algorithm
+			using (var algorith = HashAlgorithmFactory.Create(algorithmName))
 			{
-				var (input, option) = ParseArgs(args);
-				var bytes = md5Hash.ComputeHash(Encoding.UTF8.GetBytes(input));
-				var hash = BitConverter.ToString(bytes).Replace("-", "").ToLower();
-				Console.WriteLine(hash);
+				var bytes = algorith.ComputeHash(Encoding.UTF8.GetBytes(input));
+				var hash = BitConverter.ToString(bytes).Replace("-", "");
+				return option.Equals("U", StringComparison.InvariantCultureIgnoreCase) ? hash.ToUpper() : hash.ToLower();
 			}
 		}
 
