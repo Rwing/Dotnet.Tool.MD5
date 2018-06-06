@@ -7,6 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dotnet.Tool.MD5", "src\Dotn
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dotnet.Tool.MD5.UnitTest", "test\Dotnet.Tool.MD5.UnitTest\Dotnet.Tool.MD5.UnitTest.csproj", "{664D02BE-DD68-4EBF-AB40-A96A1857ED2D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B94ECE23-7DEE-4EB8-90A7-D660E12BFD82}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
