@@ -38,15 +38,19 @@ namespace Dotnet.Tool.MD5.UnitTest
 		[Fact]
 		public void GenerateHashTest1()
 		{
-			var result = Program.GenerateHash("foo","U");
-			Assert.Equal("ACBD18DB4CC2F85CEDEF654FCCC4A4D8", result);
-			result = Program.GenerateHash("foo", "u");
-			Assert.Equal("ACBD18DB4CC2F85CEDEF654FCCC4A4D8", result);
-
+			var result = Program.GenerateHash("foo", null);
+			Assert.Equal("acbd18db4cc2f85cedef654fccc4a4d8", result);
+			result = Program.GenerateHash("foo", "");
+			Assert.Equal("acbd18db4cc2f85cedef654fccc4a4d8", result);
 			result = Program.GenerateHash("foo", "L");
 			Assert.Equal("acbd18db4cc2f85cedef654fccc4a4d8", result);
 			result = Program.GenerateHash("foo", "bar");
 			Assert.Equal("acbd18db4cc2f85cedef654fccc4a4d8", result);
+
+			result = Program.GenerateHash("foo", "U");
+			Assert.Equal("ACBD18DB4CC2F85CEDEF654FCCC4A4D8", result);
+			result = Program.GenerateHash("foo", "u");
+			Assert.Equal("ACBD18DB4CC2F85CEDEF654FCCC4A4D8", result);
 		}
 	}
 }

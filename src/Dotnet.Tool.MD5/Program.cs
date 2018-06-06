@@ -20,7 +20,9 @@ namespace Dotnet.Tool.MD5
 			{
 				var bytes = algorith.ComputeHash(Encoding.UTF8.GetBytes(input));
 				var hash = BitConverter.ToString(bytes).Replace("-", "");
-				return option.Equals("U", StringComparison.InvariantCultureIgnoreCase) ? hash.ToUpper() : hash.ToLower();
+				var shouldUpper = !string.IsNullOrWhiteSpace(option) &&
+				                  option.Equals("U", StringComparison.InvariantCultureIgnoreCase);
+				return shouldUpper ? hash.ToUpper() : hash.ToLower();
 			}
 		}
 
